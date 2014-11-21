@@ -30,6 +30,12 @@ class BaseGenerator
     protected $size;
 
     /**
+     * @var interger
+     */
+    
+    protected $marginSize;
+    
+    /**
      * @var integer
      */
     protected $pixelRatio;
@@ -231,6 +237,33 @@ class BaseGenerator
         return $this->size;
     }
 
+    
+    /**
+     * Set the image margin size
+     * 
+     * @param integer $size
+     * 
+     * @return this
+     */
+    public function setMarginSize($size)
+    {
+    	if(null === $size) return $this;
+
+    	$this->marginSize = $size;
+    	
+    	return $this;
+    }
+    
+    /**
+     * Get margin size
+     * 
+     * @return interger
+     */
+    public function getMarginSize()
+    {
+    	return $this->marginSize;
+    }
+    
     /**
      * Get the pixel ratio
      *
